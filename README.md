@@ -6,6 +6,6 @@ The intention of this list is to block the more common ad and analytics servers,
 
 ### Installation
 
-Copy the contents of **list.txt** into 'Additional DNSMasq Options' under 'Services>Services>DNSMasq' in the DD-WRT control Panel.
+Copy the contents of **list.txt** into 'Additional DNSMasq Options' under 'Services>Services>DNSMasq' in the DD-WRT Control Panel.
 
-Esnure DNSMasq is enabled, and client devices are using **only** the IP address of the router for DNS.
+Ensure DNSMasq is enabled, and client devices are using **only** the IP address of the router for DNS.

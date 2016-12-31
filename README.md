@@ -2,7 +2,7 @@
 
 This is an **intentionally small** list of advertising and analytic domains for blocking in custom router firmware, such as DD-WRT and Tomato. The list is in DNSMasq configuration format.
 
-The intention of this list is to block common advertising and analytics domains without overwhelming comsumer routers with lists containing 5000+ lines.
+The intention of this list is to block common advertising and analytics domains without overwhelming consumer routers with lists containing 5000+ lines.
 
 ### Installation
 
@@ -14,7 +14,7 @@ Ensure DNSMasq is enabled, and client devices are using **only** the IP address 
 
 #####Privacy
 
-This list is soley a text file, and is not capable of collecting user data. 
+This list is solely a text file, and is not capable of collecting user data. 
 
 All blocked domains are redirected to the invalid IP address `0.0.0.0`.
 

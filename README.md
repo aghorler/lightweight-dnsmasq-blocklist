@@ -12,13 +12,13 @@ Ensure DNSMasq is enabled, and client devices are using **only** the IP address 
 
 ---
 
-#####Privacy
+#### Privacy
 
 This list is solely a text file, and is not capable of collecting user data. 
 
 All blocked domains are redirected to the invalid IP address `0.0.0.0`.
 
-#####License
+#### License
 
 Copyright 2017 Aaron Horler
 

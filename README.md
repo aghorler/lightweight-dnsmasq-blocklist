@@ -1,12 +1,18 @@
-## Lightweight DD-WRT Blocklist
+## Lightweight DNSMasq Blocklist
 
-This is an **intentionally small** list of advertising and analytic domains for blocking in custom router firmware, such as DD-WRT and Tomato. The list is in DNSMasq configuration format.
+This is an **intentionally small** list of advertising and analytic domains for blocking in custom router firmware - such as DD-WRT, LEDE, and Tomato. The list is in DNSMasq configuration format.
 
-The intention of this list is to block common advertising and analytics domains without overwhelming consumer routers with lists containing 5000+ lines.
+The intention of this list is to block common advertising and analytics domains without overwhelming consumer routers with lists containing 5000+ ultra-specific domains.
 
 ### Installation
 
-Copy the contents of **list.txt** into `Additional DNSMasq Options` under `Services > Services > DNSMasq` in the DD-WRT Control Panel. Instructions vary for other firmware.
+** DNSMasq **
+
+Copy the contents of **[list.txt](https://raw.githubusercontent.com/aghorler/lightweight-dnsmasq-blocklist/master/list.txt)** into `/etc/dnsmasq.conf`.
+
+** DD-WRT **
+
+Copy the contents of **[list.txt](https://raw.githubusercontent.com/aghorler/lightweight-dnsmasq-blocklist/master/list.txt)** into `Additional DNSMasq Options` under `Services > Services > DNSMasq` in the DD-WRT Control Panel. Instructions vary for other firmware.
 
 Ensure DNSMasq is enabled, and client devices are using **only** the IP address of the router for DNS.
 

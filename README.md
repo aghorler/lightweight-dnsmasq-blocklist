@@ -1,20 +1,36 @@
 ## Lightweight DNSMasq Blocklist
 
-This is an **intentionally small** list of advertising and analytic domains for blocking in custom router firmware - such as DD-WRT, LEDE, and Tomato. The list is in DNSMasq configuration format.
+This is an **intentionally small** list of advertising and analytic domains for blocking in custom router firmware - such as DD-WRT, LEDE, and Tomato. The list is in dnsmasq configuration format.
 
 The intention of this list is to block common advertising and analytics domains without overwhelming consumer routers with lists containing 5000+ ultra-specific domains.
 
 ### Installation
 
-** DNSMasq **
+**dnsmasq (General Linux)**
 
 Copy the contents of **[list.txt](https://raw.githubusercontent.com/aghorler/lightweight-dnsmasq-blocklist/master/list.txt)** into `/etc/dnsmasq.conf`.
 
-** DD-WRT **
+**LEDE**
+
+Create `/etc/dnsmasq.conf`, and copy the contents of **[list.txt](https://raw.githubusercontent.com/aghorler/lightweight-dnsmasq-blocklist/master/list.txt)** into the file.
+
+Or use wget.
+
+`wget https://raw.githubusercontent.com/aghorler/lightweight-dnsmasq-blocklist/master/list.txt -O /etc/dnsmasq.conf`
+
+Ensure dnsmasq is enabled, and client devices are using **only** the IP address of the router for DNS.
+
+A firewall rule (`Network > Firewal` in the GUI) can be used to force the router be used for DNS.
+
+`iptables -t nat -A PREROUTING -i br-lan -p udp --dport 53 -j DNAT --to 192.168.1.1`
+
+`iptables -t nat -A PREROUTING -i br-lan -p tcp --dport 53 -j DNAT --to 192.168.1.1`
+
+**DD-WRT**
 
 Copy the contents of **[list.txt](https://raw.githubusercontent.com/aghorler/lightweight-dnsmasq-blocklist/master/list.txt)** into `Additional DNSMasq Options` under `Services > Services > DNSMasq` in the DD-WRT Control Panel. Instructions vary for other firmware.
 
-Ensure DNSMasq is enabled, and client devices are using **only** the IP address of the router for DNS.
+Ensure dnsmasq is enabled, and client devices are using **only** the IP address of the router for DNS.
 
 ---
 

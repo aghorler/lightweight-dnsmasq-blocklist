@@ -42,7 +42,7 @@ All blocked domains are redirected to the invalid IP address `0.0.0.0`.
 
 #### License
 
-Copyright 2017 Aaron Horler
+Copyright 2018 Aaron Horler
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
